@@ -13,7 +13,7 @@ def login():
     loginMsg = ''
     if request.method == 'POST':
         if request.form['username'] == 'guest' and request.form['password'] == 'guest':
-            return 'hello '
+            return render_template('main.html')
         else:
             loginMsg = 'Invalid username or password, Please try again.'
     return render_template('login.html', loginMsg=loginMsg)
