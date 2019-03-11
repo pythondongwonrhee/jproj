@@ -4,4 +4,4 @@
 //  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 //});
 //
-alert("Hello! I am an alert box!!");
+//alert("Hello! I am an alert box!!");
