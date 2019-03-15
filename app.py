@@ -1,4 +1,5 @@
 from flask import *
+from jproj.dbModel import db
 
 
 app = Flask(__name__)
