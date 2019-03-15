@@ -1,6 +1,11 @@
 from flask import *
+<<<<<<< HEAD
 from jproj.dbModel import db
 
+=======
+from datetime import datetime
+from dbModel import *
+>>>>>>> c0906dca466a1cd95d8830e955d37091d599e16e
 
 app = Flask(__name__)
 
@@ -45,7 +50,7 @@ def main():
 #     return render_template('comment.html', username=username)
 
 @app.route('/comment')
-def index():
+def comment():
     data = "Deploying a Flask App To Heroku"
     data_UserData = UserData.query.all()
     history_dic = {}
@@ -57,7 +62,7 @@ def index():
         history_dic['CreateDate'] = _data.CreateDate.strftime('%Y/%m/%d %H:%M:%S')
         history_list.append(history_dic)
         history_dic = {}
-    return render_template('index.html', **locals())
+    return render_template('comment.html', **locals())
 
 
 @app.route('/API/add_data', methods=['POST'])
@@ -72,7 +77,7 @@ def add_data():
         )
         db.session.add(add_data)
         db.session.commit()
-    return redirect('index')
+    return redirect('comment')
 
 
 if __name__ == '__main__':
