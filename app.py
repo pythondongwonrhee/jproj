@@ -1,6 +1,6 @@
 from flask import *
 
-from dbModel import db
+
 from datetime import datetime
 from dbModel import *
 
