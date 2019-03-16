@@ -1,6 +1,6 @@
 from flask import *
 
-from jproj.dbModel import db
+from dbModel import db
 from datetime import datetime
 from dbModel import *
 
