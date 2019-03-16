@@ -1,11 +1,8 @@
 from flask import *
-<<<<<<< HEAD
-from jproj.dbModel import db
 
-=======
+from jproj.dbModel import db
 from datetime import datetime
 from dbModel import *
->>>>>>> c0906dca466a1cd95d8830e955d37091d599e16e
 
 app = Flask(__name__)
 
