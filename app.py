@@ -1,22 +1,15 @@
 from flask import *
-
-
 from datetime import datetime
 from dbModel import *
 
 app = Flask(__name__)
 
-username = 'fffffffffff'
+username = ''
 
 
 @app.route('/')
 def index():
     return redirect(url_for('login'))
-
-
-@app.route('/hello')
-def hello():
-    return render_template('hello.html', username=username)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -31,6 +24,9 @@ def login():
             loginMsg = 'Invalid username or password, Please try again.'
     return render_template('login.html', loginMsg=loginMsg)
 
+@app.route('/hello')
+def hello():
+    return render_template('hello.html', username=username)
 
 @app.route('/slideshow')
 def slideshow():
@@ -48,7 +44,7 @@ def main():
 
 @app.route('/comment')
 def comment():
-    data = "Deploying a Flask App To Heroku"
+    data = username
     data_UserData = UserData.query.all()
     history_dic = {}
     history_list = []
@@ -56,7 +52,7 @@ def comment():
         history_dic['Name'] = _data.Name
         history_dic['Id'] = _data.Id
         history_dic['Description'] = _data.Description
-        history_dic['CreateDate'] = _data.CreateDate.strftime('%Y/%m/%d %H:%M:%S')
+        history_dic['CreateDate'] = _data.CreateDate.strftime('%Y/%m/%d %H:%M')
         history_list.append(history_dic)
         history_dic = {}
     return render_template('comment.html', **locals())
