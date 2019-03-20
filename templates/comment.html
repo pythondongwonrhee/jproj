@@ -19,7 +19,20 @@
               <button type="submit" class="btn btn-primary">Submit</button>
               </div>
            </form>
-        <h2>database information</h2>
+
+           {% for history in history_list %}
+            <div id="commnet-box" class="card m-3">
+                <div class="card-header mb-n7" style="height: 50px;">
+                    <p>{{ history.Name }}</p>
+                </div>
+                <div class="card-body">
+                    <p>{{ history.Description }}</p>
+                    <p>{{ history.CreateDate }}</p>
+                </div>
+            </div>
+            {% endfor%}
+
+        <!-- <h2>database information</h2>
           <table id="datatables" class="table table-hover">
             <thead>
                 <tr>
@@ -39,8 +52,8 @@
                     </tr>
                {% endfor%}
             </tbody>
-        </table>
-      </div>
+        </table> -->
+</div>
 
 <!-- <script type="text/javascript">
     $(document).ready(function () {
