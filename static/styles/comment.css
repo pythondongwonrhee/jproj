@@ -1,0 +1,21 @@
+.image-container {
+    position: relative;
+}
+
+#banner-text {
+position: absolute;
+font-weight: bold;
+font-size: 5vw;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+width: 30%;
+height: 36%;
+margin: auto;
+}
+
+#banner {
+    position: relative;
+    width: 100%
+}
