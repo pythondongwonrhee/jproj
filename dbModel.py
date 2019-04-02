@@ -17,21 +17,21 @@ manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 
 
-class UserData(db.Model):
-    __tablename__ = 'UserData'
+class CommentDb(db.Model):
+    __tablename__ = 'CommentDb'
 
     Id = db.Column(db.Integer, primary_key=True)
-    Name = db.Column(db.String(64))
-    Description = db.Column(db.String(256))
+    Name = db.Column(db.String(24))
+    Comment = db.Column(db.String(300))
     CreateDate = db.Column(db.DateTime)
 
     def __init__(self
                  , Name
-                 , Description
+                 , Comment
                  , CreateDate
                  ):
         self.Name = Name
-        self.Description = Description
+        self.Comment = Comment
         self.CreateDate = CreateDate
 
 
