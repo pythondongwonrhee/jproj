@@ -18,6 +18,7 @@ manager.add_command('db', MigrateCommand)
 
 
 class CommentDb(db.Model):
+    
     __tablename__ = 'CommentDb'
 
     Id = db.Column(db.Integer, primary_key=True)
