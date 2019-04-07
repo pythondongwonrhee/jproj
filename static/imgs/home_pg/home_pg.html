@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Main Home Page</title>	
+		
+
+
+<style type="text/css">
+			
+			article {
+				bottom: 0px;
+				background-color: ##e0e5e9;
+			}
+			
+			li {
+				display: inline;
+				float: left;
+				width: 22%;
+			}
+			
+			.img {
+				padding: 20px;
+			}	
+
+			ul {
+				text-align: center;
+				width: 100%;
+			}
+			
+			footer {
+				padding: 5px;				
+			}
+			
+			.address {			
+				font-family: -webkit-body;
+				color: white;
+			}
+			
+			.address a{
+				color: yellow;
+				text-decoration: none;
+			}
+			body {
+				background-color: #e7e7e7;
+				text-align: center;
+				background-image: url(back_img.jpg);
+			}
+
+		</style>
+	</head>
+	<body>
+		<article> 
+			<header>				
+				<div id="top">
+					<h1 align="center"> BEAST PRICE</h1>
+			</header>
+			<main>
+			<div id="img_container" style="text-align: center; height: 500px;">
+			<img class="mySlides" src="ONSALE.jpg" style="width:400px; height: auto; margin: 0 auto;">
+			<img class="mySlides" src="99.jpg" style="width:400px; height: auto;margin: 0 auto;">
+			<img class="mySlides" src="scratches.jpg" style="width 400px; height: auto; margin: 0 auto;">
+			<img class="mySlides" src="49.jpg" style="width:400px; height: auto; margin: 0 auto;">
+			</div>
+			
+			
+			<script>
+				var slideIndex = 0;
+				carousel();
+
+				function carousel() {
+					var i;
+					var x = document.getElementsByClassName("mySlides");
+					for (i = 0; i < x.length; i++) {
+					  x[i].style.display = "none"; 
+					}
+					slideIndex++;
+					if (slideIndex > x.length) {slideIndex = 1} 
+					x[slideIndex-1].style.display = "block"; 
+					setTimeout(carousel, 2000); 
+				}
+			</script>
+
+			</main>
+			<footer role="info">
+			<div id="foot_container" style="background-color: blue; width:20%; margin: 0 auto;">
+			<pre align="center" class="address">
+						
+<Strong>Store Address:</strong>
+123 King Street
+Toronto, Ontario
+M1A 2B3
+
+You can also reach us by
+E-mail: <a href="mailto:manager@beastbuy.com">manager@beastbuy.com</a> 
+Telephone: 416-123-4567
+				</pre>
+				</div>
+			</footer>
+		</article>		
+	</body>
+</html>

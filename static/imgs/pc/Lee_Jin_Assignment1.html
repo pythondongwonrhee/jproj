@@ -1,19 +1,12 @@
-{% extends "main.html" %}
-{% block comment %}
-<!-- <!DOCTYPE html>
-<html> -->
+ <!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="UTF-8"/>
 		<title>At The Gallery</title>
 		<style type="text/css">
 			body {
-                margin-top: 0px;
 				background-color:#bfff80;
-            }
-            
-            header {
-                margin-top: 21px;
-            }
+			}
 
 			article {
 				width: 60%;
@@ -42,8 +35,7 @@
 			footer {
 				padding: 5px;
 			}
-
-
+			
 		</style>
 	</head>
 	<body>
@@ -66,7 +58,7 @@
 			<main>
 				<hr size="3"/>
 				<div  id="wisconsin" style="height: auto; float: left;">
-					<img class="img" src="{{url_for('static', filename='imgs/wisconsin.jpg')}}" alt="not available" width="233px" style="float:left" />
+					<img class="img" src="wisconsin.jpg" alt="not available" width="233px" style="float:left" />
 				</div>
 				<pre><p align="left" style="height:150px">
 Wisconsin Landscape
@@ -78,7 +70,7 @@ Classification: Paintings
 				</p></pre>
 				<hr size="3"/>
 				<div  id="stilllife" style="height: auto; float: right;">
-					<img class="img" src="{{url_for('static', filename='imgs/stilllife.jpg')}}" alt="not available" width="233px" style="float:right" />
+					<img class="img" src="stilllife.jpg" alt="not available" width="233px" style="float:right" />
 				</div>
 				<pre><p align="right"  style="height:200px">
 Still Life with Cake
@@ -90,7 +82,7 @@ Classification: Paintings
 				</p></pre>
 				<hr size="3"/>
 				<div  id="seaside" style="height: auto; float: left;">
-					<img class="img" src="{{url_for('static', filename='imgs/seaside.jpg')}}" alt="not available" width="233px" style="float:left" />
+					<img class="img" src="seaside.jpg" alt="not available" width="233px" style="float:left" />
 				</div>				
 				<pre><p align="left"  style="height:166px">
 At the Seaside
@@ -102,7 +94,7 @@ Classification: Paintings
 				</p></pre>
 				<hr size="3"/>
 				<div  id="maine" style="height: auto; float: right;">
-					<img class="img" src="{{url_for('static', filename='imgs/maine.jpg')}}" alt="not available" width="233px" style="float:right" />
+					<img class="img" src="maine.jpg" alt="not available" width="233px" style="float:right" />
 				</div>			
 				<pre><p align="right"  style="height:210px">
 Mt. Katahdin (Maine)
@@ -115,7 +107,7 @@ Classification: Paintings
 				<hr size="3"/>
 			</main>
 			<footer role="info" style="height: 700px;">
-				<h3 align="center"><a href="#top"><img src="{{url_for('static', filename='imgs/Up-Arrow.jpg')}}" alt="not found" style="width:42px"/></a></h3>
+				<h3 align="center"><a href="#top"><img src="Up-Arrow.jpg" alt="not found" style="width:42px"/></a></h3>
 				<pre align="left">
 Please fell free to contact our curator at
 123 king st.
@@ -129,5 +121,4 @@ Telephone: 416-123-4567
 			</footer>
 		</article>		
 	</body>
-<!-- </html> -->
-{% endblock %}
+</html>

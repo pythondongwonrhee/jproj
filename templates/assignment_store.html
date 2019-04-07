@@ -1,0 +1,278 @@
+{% extends "main.html" %}
+{% block comment %}
+<head>
+<meta charset="UTF-8">
+<title>BEAST BUY</title>
+<style type="text/css">
+
+
+header {
+width: 100%;
+height: 100px;
+background-color: #eff4f7;
+}
+
+
+#clientid_container {
+    text-align: center;
+    padding-top: 25px;
+    color: red;
+}
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100px;
+}
+
+
+
+#trigger {
+	width: 75%;
+	height: 233px;
+    position: absolute;
+    margin-left: 45px;
+	text-align: center;
+}
+
+#home_img_container {
+	position: absolute;
+	padding-left: 50%;
+	margin-left: -117px;
+	z-index: 2;
+	transition-duration: 3s
+}	
+
+#toe_1_container {
+	position: absolute;
+	padding-top: 129px;
+	padding-left: 35%;
+	transition-duration: 4s;
+}
+
+#toe_1 {
+	position: absolute;
+    display:block; 
+	width: 55px; 
+	height: 95px; 
+	background-color: green; 
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+	transform: rotate(-35deg);
+	border: solid 1px;
+}
+
+#toe_1_txt {
+	text-align: center;
+	margin-top: 50%
+}
+
+.toe {
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+	
+}
+
+.toe a{
+	color: white;
+	text-decoration: none;
+	
+}
+
+#toe_2_container {
+	position: absolute;
+	padding-top: 129px;
+	padding-left: 35%;
+	transition-duration: 4s;
+}
+
+#toe_2 {
+	position: absolute;
+    display:block; 
+	width: 52px; 
+	height: 100px; 
+	background-color: green; 
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+	transform: rotate(-15deg);
+	border: solid 1px;
+}
+
+#toe_2_txt {
+	text-align: center;
+	margin-top: 50%
+}
+
+#toe_3_container {
+	position: absolute;
+	padding-top: 115px;
+	padding-left: 52%;
+	transition-duration: 4s;
+	
+}
+
+#toe_3 {
+	position: absolute;
+    display:block; 
+	width: 52px; 
+	height: 100px; 
+	background-color: green; 
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+	transform: rotate(15deg);
+	border: solid 1px;
+}
+
+#toe_3_txt {
+	text-align: center;
+	margin-top: 50%
+}
+
+#toe_4_container {
+	position: absolute;
+	padding-top: 120px;
+	padding-left: 55%;
+	transition-duration: 4s
+}
+
+#toe_4 {
+	position: absolute;
+    display:block; 
+	width: 55px; 
+	height: 100px; 
+	background-color: green; 
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+	transform: rotate(35deg);
+	border: solid 1px;
+}
+
+#toe_4_txt {
+	text-align: center;
+	margin-top: 50%
+}
+
+#toe_base_container {
+	position: absolute;
+    padding-left: 30%;
+    margin-top: 122px;
+	z-index: 1;
+}
+
+#toe_base {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 30% 50% 150% 50%;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  background-color: #d4e438;
+}
+
+#toe_base_txt {
+	transform: rotate(-45deg);
+	text-align: center;
+	margin-top: 40%
+}
+
+#toe_base_txt a{
+	text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+#trigger:hover > #home_img_container{
+	opacity: 0;
+	z-index: -1;
+}
+
+#trigger:hover > #toe_base {
+	z-index:10;
+}
+
+#trigger:hover > #toe_4_container{
+	padding-top: 51px;
+	padding-left: 69%;
+	
+}
+
+#trigger:hover > #toe_3_container{
+	padding-top: 8px;
+	padding-left: 53%;
+	
+}
+
+
+#trigger:hover > #toe_2_container{
+	padding-top: 7px;
+	padding-left: 32%;
+	
+}
+
+#trigger:hover > #toe_1_container{
+	padding-top: 49px;
+	padding-left: 16%;
+}
+
+.frame {
+	position: absolute;
+	border: 0px;
+	display: block;	
+	margin-left: 20%;
+	width:80%;
+	height: 80%;
+	overflow: auto;
+	background-color: #eff4f7;
+}        
+</style>
+</head>
+<body>
+<header>
+<h1>
+<div id="clientid_container">
+BEAST BUY
+</div>
+<hr style="background-color: red; height: 5px; width: 80%; border: 0px">
+</h1>
+
+</header>
+<nav style="width:20%; padding: 0; background-color: #e0e5e9; position: fixed;
+			height: 100%; overflow: auto; text-align:center;">
+	<div id="trigger">
+	
+		<div id="home_img_container">	
+			<img id="home_img" src="{{url_for('static', filename='imgs/monster.jpg')}}" alt="not available" width="233px"/>
+		</div> 	
+		
+		<div id="toe_base_container">
+			<div id="toe_base">
+				<div id="toe_base_txt"><a href="{{url_for('static', filename='imgs/home_pg/home_pg.html')}}" target="iframe_a">HOME</a></div>
+			</div>
+		</div>
+		
+		<div id="toe_1_container">
+			<div id="toe_1" class="toe">
+				<div id="toe_1_txt"><a href="{{url_for('static', filename='imgs/pc/pc.html')}}" target="iframe_a">PC</a></div>
+			</div>
+		</div>
+		
+		<div id="toe_2_container">
+			<div id="toe_2" class="toe">
+				<div id="toe_2_txt"><a href="{{url_for('static', filename='imgs/tv/tv.html')}}" target="iframe_a">TV</a></div>
+			</div>
+		</div>
+		
+		<div id="toe_3_container">
+			<div id="toe_3" class="toe">
+				<div id="toe_3_txt"><a href="{{url_for('static', filename='imgs/others/others.html')}}" target="iframe_a">OTHER</a></div>
+			</div>
+		</div>
+		
+		<div id="toe_4_container">
+			<div id="toe_4" class="toe">
+				<div id="toe_4_txt"><a href="{{url_for('static', filename='imgs/order/order.html')}}" target="iframe_a">ORDER</a></div>
+			</div>
+		</div> 
+	</div>
+
+</nav>
+
+
+<iframe	class="frame" id="frame_base" src="{{url_for('static', filename='imgs/home_pg/home_pg.html')}}" name="iframe_a"></iframe>
+</body>
+{% endblock %}

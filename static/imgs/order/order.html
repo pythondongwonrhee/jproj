@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>ORDER</title>
+		<style type="text/css">
+			.dropdownmenu {
+				width: 40%;
+				text-align: center;
+				font-size: 15px;
+				height: 30px;
+			}
+			.td_qty {
+				text-align: left;
+				margin-left: -370px;
+				font-size: 18px;
+				height: 30px;
+			}
+			button {
+				text-align: center;
+				font-size: 15px;
+				height: 35px;
+			}
+			.order_button_container {
+				padding-left: 170px;
+			}
+		</style>
+	</head>
+	<body>
+		<article> 
+			<table style="width: 80%; margin: 0 auto; top ">
+				<tr>
+					<td>
+						<select class="dropdownmenu">
+						  <option value="1">PC</option>
+						  <option value="2">i5, 1TB,8Gb</option>
+						  <option value="3">i7, 3TB, 16Gb</option>
+						  <option value="4">pentium, 1TB, 8Gb</option>
+						  <option value="5">AMD, 500GB, 1Gb</option>
+						  <option value="6">i3, 2TB, 16Gb</option>
+						</select>
+					</td>
+					<td>
+						<input id="pc_qty" class="td_qty" type="number" min="0" max="999" step="1" />						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select class="dropdownmenu">
+						  <option value="1">TV</option>
+						  <option value="2">RCA 19"</option>
+						  <option value="3">LG SMARTTV</option>
+						  <option value="4">SAMSUNG 29"</option>
+						  <option value="5">LG 34"</option>
+						  <option value="6">CLASSIC</option>
+						</select>
+					</td>
+					<td>
+						<input id="pc_qty" class="td_qty" type="number" min="0" max="999" step="1" />						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select class="dropdownmenu">
+						  <option value="1">OTHERS</option>
+						  <option value="2">DISHWASHER</option>
+						  <option value="3">FAN</option>
+						  <option value="4">LAMP</option>
+						  <option value="5">LG FRIDGE</option>
+						  <option value="6">RANGE</option>
+						</select>
+					</td>
+					<td>
+						<input id="pc_qty" class="td_qty" type="number" min="0" max="999" step="1" />						
+					</td>
+				</tr>
+				<tr>
+					<td class = "order_button_container">
+						<button onclick="Javascript: alert('Thank you for your business');" tabindex="1">
+							ORDER NOW
+						</button>
+					</td>
+					<td>
+						<button style="margin-left: -370px;" onclick="Javascript: alert('Sorry for not being able to do business with you');" tabindex="2">
+							Cancel
+						</button>						
+					</td>
+				</tr>
+			</table>
+		
+		
+		</article>		
+	</body>
+</html>
