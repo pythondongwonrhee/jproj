@@ -26,17 +26,26 @@ def login():
 
 @app.route('/hello')
 def hello():
-    return render_template('hello.html', username=username)
+    return render_template('hello.html')
 
 
 @app.route('/slideshow')
 def slideshow():
-    return render_template('slideshow.html', username=username)
+    return render_template('slideshow.html')
 
 
-@app.route('/assignment')
-def assignment():
-    return render_template('slideshow.html', username=username)
+@app.route('/assignment_temp_convert')
+def assignment_temp_convert():
+    return render_template('assignment_temp_convert.html')
+
+
+@app.route('/assignment_first')
+def assignment_first():
+    return render_template('assignment_first.html')
+
+@app.route('/assignment_store')
+def assignment_store():
+    return render_template('assignment_store.html')
 
 
 @app.route('/main')

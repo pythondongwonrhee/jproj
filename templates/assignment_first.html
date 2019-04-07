@@ -1,0 +1,133 @@
+{% extends "main.html" %}
+{% block comment %}
+<!-- <!DOCTYPE html>
+<html> -->
+	<head>
+		<meta charset="UTF-8"/>
+		<title>At The Gallery</title>
+		<style type="text/css">
+			body {
+                margin-top: 0px;
+				background-color:#bfff80;
+            }
+            
+            header {
+                margin-top: 21px;
+            }
+
+			article {
+				width: 60%;
+				margin-top: -20px;
+				margin-left: auto;
+				margin-right: auto;
+				bottom: 0px;
+				background-color: #FFFFCC;
+			}
+			
+			li {
+				display: inline;
+				float: left;
+				width: 22%;
+			}
+			
+			.img {
+				padding: 20px;
+			}	
+
+			ul {
+				text-align: center;
+				width: 100%;
+			}
+			
+			footer {
+				padding: 5px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<article> 
+			<header>				
+				<div id="top">
+					<h1 align="center">At The Gallery</h1>
+				</div>
+				<h2 align="center">The Jay Lee Virtual Collection</h2>
+				<hr size="3"/>
+				<nav style="height: 50px;">
+					<ul>
+						<li><a href="#wisconsin">Wisconsin Landscape</a></li>
+						<li><a href="#stilllife">Still Life with Cake </a></li>
+						<li><a href="#seaside">At the Seaside</a></li>
+						<li><a href="#maine">Mt. Katahdin (Maine)</a></li>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<hr size="3"/>
+				<div  id="wisconsin" style="height: auto; float: left;">
+					<img class="img" src="{{url_for('static', filename='imgs/wisconsin.jpg')}}" alt="not available" width="233px" style="float:left" />
+				</div>
+				<pre><p align="left" style="height:150px">
+Wisconsin Landscape
+Artist: John Steuart Curry
+Date: 1938–39
+Medium: Oil on canvas
+Dimensions: 42 x 84 in. (106.7 x 213.4 cm)
+Classification: Paintings
+				</p></pre>
+				<hr size="3"/>
+				<div  id="stilllife" style="height: auto; float: right;">
+					<img class="img" src="stilllife.jpg" alt="not available" width="233px" style="float:right" />
+				</div>
+				<pre><p align="right"  style="height:200px">
+Still Life with Cake
+Artist: Raphaelle Peale (1774–1825)
+Date: 1818
+Medium: Oil on wood
+Dimensions: 10 3/4 x 15 1/4 in. (27.3 x 38.7 cm)
+Classification: Paintings
+				</p></pre>
+				<hr size="3"/>
+				<div  id="seaside" style="height: auto; float: left;">
+					<img class="img" src="seaside.jpg" alt="not available" width="233px" style="float:left" />
+				</div>				
+				<pre><p align="left"  style="height:166px">
+At the Seaside
+Artist: William Merritt Chase
+Date: 1892
+Medium: Oil on canvas
+Dimensions: 20 x 34 in. (50.8 x 86.4 cm)
+Classification: Paintings
+				</p></pre>
+				<hr size="3"/>
+				<div  id="maine" style="height: auto; float: right;">
+					<img class="img" src="maine.jpg" alt="not available" width="233px" style="float:right" />
+				</div>			
+				<pre><p align="right"  style="height:210px">
+Mt. Katahdin (Maine)
+Artist: Marsden Hartley
+Date: 1939–40
+Medium: Oil on canvas
+Dimensions: 30 1/4 × 40 1/4 in. (76.8 × 102.2 cm)
+Classification: Paintings
+				</p></pre>
+				<hr size="3"/>
+			</main>
+			<footer role="info" style="height: 700px;">
+				<h3 align="center"><a href="#top"><img src="Up-Arrow.jpg" alt="not found" style="width:42px"/></a></h3>
+				<pre align="left">
+Please fell free to contact our curator at
+123 king st.
+toronto, ont
+M1A 2B3
+
+You can also reach us by
+E-mail:<a href="mailto:jin.lee@senecacollege.ca"> jin.lee@senecacollege.ca</a> 
+Telephone: 416-123-4567
+				</pre>
+			</footer>
+		</article>		
+	</body>
+<!-- </html> -->
+{% endblock %}

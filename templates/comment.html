@@ -15,22 +15,27 @@
                   <input type="text" class="form-control" name="name" placeholder="Name">
               </div>
               <div class="form-group">
-                <textarea class="form-control" rows="5" id="comment" name="comment" form="commentform" maxlength="300">Enter Commnet...</textarea>
+                <textarea class="form-control" rows="5" id="comment" name="comment" form="commentform" placeholder= "Write your comment..." maxlength="300"></textarea>
               </div>
-              <div class="text-right">
+              <div>
+              Max 300 charaters
+              <div class="text-right float-right">
               <button type="submit" class="btn btn-primary">Submit</button>
               </div>
+            </div>
            </form>
+<div class="mt-4">           
 <hr>
 <hr>
+</div>
      <div id="form-wrapper">
        
-     <form action="/API/search" method="post" class="form-inline">
-      <div class="col-11">
-    <input class="form-control  my-2" type="search" placeholder="Serach Name" name="searchh" aria-label="Search" style="width: 100%">
+     <form action="/API/search" method="post"  class="row justify-content-between">
+      <div class="col-lg-10 col-xs-1" >
+    <input class="form-control  my-2" type="search" placeholder="Serach Name" name="searchh" aria-label="Search" >
   </div>
-  <div class="col-1" >
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-right: -1%;">Search</button>
+  <div class="col-lg-1 col-xs-1" >
+    <button class="btn btn-outline-success my-2 float-right" type="submit">Search</button>
   </div>
   </form>
 </div>

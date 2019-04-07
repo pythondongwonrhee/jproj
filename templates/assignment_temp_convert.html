@@ -1,0 +1,204 @@
+{% extends "main.html" %}
+{% block comment %}
+<!-- <html> -->
+	<head>
+		<title>Temperature Conversion by Jin Won Lee</title> 
+		<script type="text/javascript">
+		var fahArray = new Array();
+		var celArray = new Array();
+		var myInnerHtml = '';
+		var i = 0;
+		var fTotal = 0;
+		var cTotal = 0;
+		var fAvg = 0;
+		var cAvg = 0;
+		var flagg =0;
+			
+		window.onkeypress = function(event)
+		{
+			if (event.charCode == 67 || event.charCode == 99)
+			{
+				fConvert()
+			}
+		}
+		
+		
+		function isNumber(evt) 
+		{	
+			evt = (evt) ? evt : window.event;
+			var charCode = (evt.which) ? evt.which : evt.keyCode;
+			if (charCode == 45 || (charCode > 47 && charCode < 58))
+			{
+				if  (charCode == 45)
+				{
+					flagg = 1;
+				}
+				if (flagg == 1)
+				{
+					document.getElementById("fahTextBox").maxLength = "5";
+				}
+				else
+					document.getElementById("fahTextBox").maxLength = "4";
+				
+				minmax();
+				if (event.keyCode == 13)
+				{
+					fConvert()
+				}
+				return true;
+			}
+			
+			minmax();
+			if (event.keyCode == 13)
+				{
+					fConvert()
+				}
+			return false;
+		}
+		
+		
+		function minmax() 
+		{
+			
+			var min = -9999;
+			var max = 9999;
+			
+			if(parseInt(fahTextBox.value) < min || parseInt(fahTextBox.value) > max) 
+			{
+				fahTextBox.value = "";
+				alert("please enter number between -9999 and 9999");
+				fahTextBox.value = "";
+				
+			}
+			else 
+			return fahTextBox.value;
+		}
+		
+		function fConvert()
+		{	
+			if (fahTextBox.value != "")
+			{
+				fahArray[i] = parseInt(fahTextBox.value);
+				fTotal = fTotal + fahArray[i];
+				console.log('fahArray is now: ' , i,  ', ', fahArray[i] );
+				fahTextBox.value = "";
+				fahTextBox.focus();
+				celArray[i]=(fahArray[i]-32)*5/9;
+				cTotal = cTotal + celArray[i];
+				var tempInnerHTML = "\t\t" +  fahArray[i] +"\t\t" +  celArray[i].toFixed(2);		//.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center; display:block;');
+				myInnerHtml = myInnerHtml + "\n" + tempInnerHTML;
+				lblResult.innerHTML = myInnerHtml;
+				celTextBox.value = celArray[i].toFixed(2);
+				i = i + 1;
+				if ( i == 2)
+				{
+					document.getElementById("fAvgBtn").disabled = false;
+				}
+				flagg = 0;
+			}
+			else
+				if (fahTextBox.value == "")
+				{
+				alert("please enter number between -9999 and 9999");
+				}
+				flagg = 0;
+			if ( i == 10)
+			{
+				fAverage();
+				document.getElementById("fResetBtn").style.visibility = "visible";
+				document.getElementById("fahTextBox").readOnly = true;
+				document.getElementById("celTextBox").readOnly = true;
+				
+			}
+		}
+		
+		function fAverage()
+		{
+			fAvg = fTotal / i;
+			cAvg = cTotal / i;
+			lblResult.innerHTML = myInnerHtml + "\n" + "=================================================" + "\n\t\t" + fAvg.toFixed(2)
+			+ "\t\t" + cAvg.toFixed(2);
+			document.getElementById("fResetBtn").style.visibility = "visible";
+			
+		}
+		
+		function fReset()
+		{
+			i = 0;
+			fTotal = 0;
+			cTotal = 0;
+			fAvg = 0;
+			cAvg = 0;
+			lblResult.innerHTML = "";
+			fahTextBox.value = "";
+			celTextBox.value = "";
+			myInnerHtml = "";
+			document.getElementById("fResetBtn").style.visibility = "hidden";
+			document.getElementById("fAvgBtn").disabled = true;
+			document.getElementById("fahTextBox").readOnly = false;
+		}
+			
+		</script>
+
+		<style>
+
+		.conversion_table {
+			table-layout:fixed;
+			width: 400px; 
+			border: solid 2px;
+		}
+		td {
+			width: 100px;
+		}
+		.buttons {
+			text-align: center;
+		}
+		
+		</style>
+
+	</head>
+
+	<body>
+		<header>
+			<h1>Temperature Conversion By Jin Won Lee</h1>
+		</header>
+		<table class="conversion_table" >
+			<tr>
+				<td>Fahrenheit</td>
+				<td></td>
+				<td></td>
+				<td><input id="fahTextBox" type="text" name="Fahrenheit" style="float:right" onkeypress="return isNumber(event)"></td>
+			</tr>
+			<tr>
+				<td>Celsius</td>
+				<td></td>
+				<td></td>
+				<td><input id="celTextBox" type="text" name="Celsius" style="float:right;" readOnly></td>
+			</tr>
+			<tr>
+				<td></td>				
+				<td>Fahrenheit</td>
+				<td>Celsius</td>
+				<td></td>
+				
+			</tr>
+			<tr>
+				<td colspan="2">
+					<textarea readonly rows="20" cols="50" id="lblResult"></textarea>
+				</td>
+				
+			</tr>
+			<tr>
+				<td colspan="4" class="buttons">
+					<button type="button" id="fCovBtn" onclick="fConvert(fahTextBox)">Convert</button>
+					<button type="button" id="fAvgBtn" onclick="fAverage()" disabled>Average</button>
+					<button type="button" id="fResetBtn" onclick="fReset()" style="visibility:hidden">Reset</button>
+				</td>
+			</tr>
+				
+			
+		
+		</table>
+	</body>
+<!-- </html> -->
+{% endblock %}
