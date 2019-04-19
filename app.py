@@ -78,8 +78,12 @@ def add_data():
             Comment=comment,
             CreateDate=datetime.now()
         )
-        db.session.add(add_data)
-        db.session.commit()
+        try:
+            db.session.add(add_data)
+            db.session.commit()
+                
+        except:
+            db.session.rollback()
     return redirect('comment')
 
 
