@@ -8,7 +8,7 @@ username = ''
 
 @app.route('/')
 def index():
-    return redirect(url_for('login'))
+    return redirect(url_for('hello'))
 
 
 @app.route('/login', methods=['GET', 'POST'])
