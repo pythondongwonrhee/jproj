@@ -81,7 +81,10 @@ def add_data():
         try:
             db.session.add(add_data)
             db.session.commit()
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 641fc9f44bfd5adc30cfdc8a703f3cd771ab5a20
         except:
             db.session.rollback()
     return redirect('comment')
