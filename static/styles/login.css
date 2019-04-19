@@ -6,26 +6,6 @@
     margin-top: 5%;
 }
 
-@media (min-width: 576px) {
-    #my-login-box {
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width: 768px) {
-    #my-login-box {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 992px) {
-    #my-login-box {
-        font-size: 2rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    #my-login-box {
-        font-size: 2.7rem;
-    }
-}
+/* ::placeholder{
+    font-size: 5rem;
+} */
