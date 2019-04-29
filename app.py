@@ -4,7 +4,7 @@ from dbModel import *
 
 app = Flask(__name__)
 
-username = ''
+username = None
 
 @app.route('/')
 def index():
@@ -17,44 +17,51 @@ def login():
     if request.method == 'POST':
         global username
         username= request.form['username']
-        if request.form['username'] == 'guest' and request.form['password'] == 'guest':
-            return redirect(url_for('hello'))
+        if request.form['password'] == 'f':
+            print(username)
+            resp = make_response(render_template('hello.html', username=username))
+            print (resp)
+            resp.set_cookie('username', username)
+            return resp
         else:
-            loginMsg = 'Invalid username or password, Please try again.'
+            loginMsg = 'Invalid password, Please try again.'
     return render_template('login.html', loginMsg=loginMsg)
 
 
 @app.route('/hello')
 def hello():
-    return render_template('hello.html')
+    return render_template('hello.html', username=username)
 
 
 @app.route('/slideshow')
 def slideshow():
-    return render_template('slideshow.html')
+    return render_template('slideshow.html', username=username)
 
 
 @app.route('/assignment_temp_convert')
 def assignment_temp_convert():
-    return render_template('assignment_temp_convert.html')
+    return render_template('assignment_temp_convert.html', username=username)
 
 
 @app.route('/assignment_first')
 def assignment_first():
-    return render_template('assignment_first.html')
+    return render_template('assignment_first.html', username=username)
 
 @app.route('/assignment_store')
 def assignment_store():
-    return render_template('assignment_store.html')
+    return render_template('assignment_store.html', username=username)
 
 
 @app.route('/main')
 def main():
+    username = request.cookies.get('username')
+    print('username_main', username)
     return render_template('main.html', username=username)
 
 
 @app.route('/comment')
 def comment():
+    username = request.cookies.get('username')
     data_CommentDb = CommentDb.query.order_by(desc(CommentDb.CreateDate)).all()
     Comment_dic = {}
     Comment_list = []

@@ -37,7 +37,9 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="{{ url_for('comment') }}">comments</a>
+        
+            <a class="nav-link" href="{{ url_for('comment') }}">comments</a>
+        
       </li>
 
     </ul>
@@ -47,7 +49,11 @@
   </div>
 
       <span class="navbar-text">
-        <a class="nav-link" href="{{ url_for('login') }}">login</a>
+        {% if username == None %}
+            <a class="nav-link" href="{{ url_for('login') }}">login</a>
+        {% else %}
+            <p> Hello, {{username}}</p>
+        {% endif %}
       </span>
 
 
