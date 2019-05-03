@@ -1,12 +1,10 @@
 {% extends "main.html" %}
 {% block hello %}
-<style type="text/css">
-    article {
-        width: 60%;
-        margin: auto;
-    }
-    </style>
-<article>
+<div class="container">
+<div class="col col-lg-11">
+
+        <img class="float-lg-right float-none" src="{{url_for('static', filename='imgs/stilllife.jpg')}}" alt="not available" width="233px" style="float:right" />
+    
     <p>This is Jay's home for practing web development
         By the time Angela was brought to Jamestown’s muddy shores in 1619, she had survived war and capture in West Africa, a forced march of more than 100 miles to the sea, a miserable Portuguese slave ship packed with 350 other Africans and an attack by pirates during the journey to the Americas.
 
@@ -18,6 +16,8 @@
 
     She is listed in the 1624 and 1625 census as living in the household of Capt. William Pierce, first as “Angelo a Negar” and then as “Angela Negro woman in by Treasurer.” By then, she had survived two other harrowing events: a Powhatan Indian attack in 1622 that left 347 colonists dead and the famine that followed.
     </p>
-</article>
+
+</div>
+</div>
 
 {% endblock %}
