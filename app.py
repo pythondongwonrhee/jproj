@@ -17,7 +17,7 @@ def login():
     if request.method == 'POST':
         global username
         username= request.form['username']
-        if request.form['password'] == 'f':
+        if request.form['password'] == 'Guest':
             print(username)
             resp = make_response(render_template('hello.html', username=username))
             print (resp)
