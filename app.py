@@ -1,6 +1,7 @@
 from flask import *
 from datetime import datetime
 from dbModel import *
+import requests
 
 app = Flask(__name__)
 
@@ -27,6 +28,32 @@ def login():
             loginMsg = 'Invalid password, Please try again.'
     return render_template('login.html', loginMsg=loginMsg)
 
+@app.route('/weather', methods=['GET', 'POST'])
+def weather():
+    print('gggggggggggggggggg')
+    city = request.form['cityy']
+    city2 = city.encode("utf-8")
+    print('citu2', city2)
+    print('city', city)
+    payload = {'q': city + ',CA', 'APPID' : '796f194a3c3999feb3fcba072372a256'}
+
+    w = requests.get('http://api.openweathermap.org/data/2.5/weather', params=payload)
+    print(w.url)
+    # w = requests.get('http://api.openweathermap.org/data/2.5/weather?q=city2,US&APPID=796f194a3c3999feb3fcba072372a256')
+    w_json = w.json()
+    print (w_json)
+
+    for xx in w_json:
+        print("Number of people in space:", xx)
+
+    x1 = w_json['weather'][0]['description']
+
+    return render_template('hello.html', x1=x1)
+    # if request.method == 'POST':
+    #     print('weahterrrrrrrrrrrrr')
+    #     city = request.form['city']
+    #     print(city)
+    # return render_template('hello.html')
 
 @app.route('/hello')
 def hello():

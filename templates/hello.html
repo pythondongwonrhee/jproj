@@ -14,6 +14,460 @@
         When I worked at the massive production environment,  I understood  great advantage of Database, Web programming, MS Excel VBA and Virtual Machine. I could learn all I’m interested in.  I appreciate  all the people who post information at Online Tutorials, Blog, Google, Forums, YouTube.<br><br><br>
         <h5>J’s home is built with Python,  Flask, Bootstrap, PostgresSQL on Heroku Cloud Application Platform.  As developing this site,  The Linux system is little more familiar to me.
         </h5>
+        <h3>Find out weather in your city</h3>
+        <form action = "/weather" method="post">
+            <div class="form-group">
+                <input id="cityy" class="form-control form-control-lg" placeholder="Toronto" list="states-list" type="text" name="cityy" value="" autofocus>
+            </div>
+            <div class="form-group">
+                <input type = "submit" value = "submit" >
+                <!-- <button class="btn btn-info btn-lg btn-block">Find</button> -->
+            </div>
+        </form>
+        <p>{{x1}}</p>
+
+        <datalist id="states-list">
+            <option>Banff</option>
+
+            <option>Brooks</option>
+
+            <option>Calgary</option>
+
+            <option>Edmonton</option>
+
+            <option>Fort McMurray</option>
+
+            <option>Grande Prairie</option>
+
+            <option>Jasper</option>
+
+            <option>Lake Louise</option>
+
+            <option>Lethbridge</option>
+
+            <option>Medicine Hat</option>
+
+            <option>Red Deer</option>
+
+            <option>Saint Albert</option>
+
+            <option>Barkerville</option>
+
+            <option>Burnaby</option>
+
+            <option>Campbell River</option>
+
+            <option>Chilliwack</option>
+
+            <option>Courtenay</option>
+
+            <option>Cranbrook</option>
+
+            <option>Dawson Creek</option>
+
+            <option>Delta</option>
+
+            <option>Esquimalt</option>
+
+            <option>Fort Saint James</option>
+
+            <option>Fort Saint John</option>
+
+            <option>Hope</option>
+
+            <option>Kamloops</option>
+
+            <option>Kelowna</option>
+
+            <option>Kimberley</option>
+
+            <option>Kitimat</option>
+
+            <option>Langley</option>
+
+            <option>Nanaimo</option>
+
+            <option>Nelson</option>
+
+            <option>New Westminster</option>
+
+            <option>North Vancouver</option>
+
+            <option>Oak Bay</option>
+
+            <option>Penticton</option>
+
+            <option>Powell River</option>
+
+            <option>Prince George</option>
+
+            <option>Prince Rupert</option>
+
+            <option>Quesnel</option>
+
+            <option>Revelstoke</option>
+
+            <option>Rossland</option>
+
+            <option>Trail</option>
+
+            <option>Vancouver</option>
+
+            <option>Vernon</option>
+
+            <option>Victoria</option>
+
+            <option>West Vancouver</option>
+
+            <option>White Rock</option>
+
+            <option>Brandon</option>
+
+            <option>Churchill</option>
+
+            <option>Dauphin</option>
+
+            <option>Flin Flon</option>
+
+            <option>Kildonan</option>
+
+            <option>Saint Boniface</option>
+
+            <option>Swan River</option>
+
+            <option>Thompson</option>
+
+            <option>Winnipeg</option>
+
+            <option>York Factory</option>
+
+            <option>Bathurst</option>
+
+            <option>Caraquet</option>
+
+            <option>Dalhousie</option>
+
+            <option>Fredericton</option>
+
+            <option>Miramichi</option>
+
+            <option>Moncton</option>
+
+            <option>Saint John</option>
+
+            <option>Argentia</option>
+
+            <option>Bonavista</option>
+
+            <option>Channel-Port aux Basques</option>
+
+            <option>Corner Brook</option>
+
+            <option>Ferryland</option>
+
+            <option>Gander</option>
+
+            <option>Grand Falls–Windsor</option>
+
+            <option>Happy Valley–Goose Bay</option>
+
+            <option>Harbour Grace</option>
+
+            <option>Labrador City</option>
+
+            <option>Placentia</option>
+
+            <option>Saint Anthony</option>
+
+            <option>St. John’s</option>
+
+            <option>Wabana</option>
+
+            <option>Fort Smith</option>
+
+            <option>Hay River</option>
+
+            <option>Inuvik</option>
+
+            <option>Tuktoyaktuk</option>
+
+            <option>Yellowknife</option>
+
+            <option>Baddeck</option>
+
+            <option>Digby</option>
+
+            <option>Glace Bay</option>
+
+            <option>Halifax</option>
+
+            <option>Liverpool</option>
+
+            <option>Louisbourg</option>
+
+            <option>Lunenburg</option>
+
+            <option>Pictou</option>
+
+            <option>Port Hawkesbury</option>
+
+            <option>Springhill</option>
+
+            <option>Sydney</option>
+
+            <option>Yarmouth</option>
+
+            <option>Bancroft</option>
+
+            <option>Barrie</option>
+
+            <option>Belleville</option>
+
+            <option>Brampton</option>
+
+            <option>Brantford</option>
+
+            <option>Brockville</option>
+
+            <option>Burlington</option>
+
+            <option>Cambridge</option>
+
+            <option>Chatham</option>
+
+            <option>Chatham-Kent</option>
+
+            <option>Cornwall</option>
+
+            <option>Elliot Lake</option>
+
+            <option>Etobicoke</option>
+
+            <option>Fort Erie</option>
+
+            <option>Fort Frances</option>
+
+            <option>Gananoque</option>
+
+            <option>Guelph</option>
+
+            <option>Hamilton</option>
+
+            <option>Iroquois Falls</option>
+
+            <option>Kapuskasing</option>
+
+            <option>Kawartha Lakes</option>
+
+            <option>Kenora</option>
+
+            <option>Kingston</option>
+
+            <option>Kirkland Lake</option>
+
+            <option>Kitchener</option>
+
+            <option>Laurentian Hills</option>
+
+            <option>London</option>
+
+            <option>Midland</option>
+
+            <option>Mississauga</option>
+
+            <option>Moose Factory</option>
+
+            <option>Moosonee</option>
+
+            <option>Niagara Falls</option>
+
+            <option>Niagara-on-the-Lake</option>
+
+            <option>North Bay</option>
+
+            <option>North York</option>
+
+            <option>Oakville</option>
+
+            <option>Orillia</option>
+
+            <option>Oshawa</option>
+
+            <option>Ottawa</option>
+
+            <option>Parry Sound</option>
+
+            <option>Perth</option>
+
+            <option>Peterborough</option>
+
+            <option>Picton</option>
+
+            <option>Port Colborne</option>
+
+            <option>Saint Catharines</option>
+
+            <option>Saint Thomas</option>
+
+            <option>Sarnia-Clearwater</option>
+
+            <option>Sault Sainte Marie</option>
+
+            <option>Scarborough</option>
+
+            <option>Simcoe</option>
+
+            <option>Stratford</option>
+
+            <option>Sudbury</option>
+
+            <option>Temiskaming Shores</option>
+
+            <option>Thorold</option>
+
+            <option>Thunder Bay</option>
+
+            <option>Timmins</option>
+
+            <option>Toronto</option>
+
+            <option>Trenton</option>
+
+            <option>Waterloo</option>
+
+            <option>Welland</option>
+
+            <option>West Nipissing</option>
+
+            <option>Windsor</option>
+
+            <option>Woodstock</option>
+
+            <option>York</option>
+
+            <option>Borden</option>
+
+            <option>Cavendish</option>
+
+            <option>Charlottetown</option>
+
+            <option>Souris</option>
+
+            <option>Summerside</option>
+
+            <option>Asbestos</option>
+
+            <option>Baie-Comeau</option>
+
+            <option>Beloeil</option>
+
+            <option>Cap-de-la-Madeleine</option>
+
+            <option>Chambly</option>
+
+            <option>Charlesbourg</option>
+
+            <option>Châteauguay</option>
+
+            <option>Chibougamau</option>
+
+            <option>Côte-Saint-Luc</option>
+
+            <option>Dorval</option>
+
+            <option>Gaspé</option>
+
+            <option>Gatineau</option>
+
+            <option>Granby</option>
+
+            <option>Havre-Saint-Pierre</option>
+
+            <option>Hull</option>
+
+            <option>Jonquière</option>
+
+            <option>Kuujjuaq</option>
+
+            <option>La Salle</option>
+
+            <option>La Tuque</option>
+
+            <option>Lachine</option>
+
+            <option>Laval</option>
+
+            <option>Lévis</option>
+
+            <option>Longueuil</option>
+
+            <option>Magog</option>
+
+            <option>Matane</option>
+
+            <option>Montreal</option>
+
+            <option>Montréal-Nord</option>
+
+            <option>Percé</option>
+
+            <option>Port-Cartier</option>
+
+            <option>Quebec</option>
+
+            <option>Rimouski</option>
+
+            <option>Rouyn-Noranda</option>
+
+            <option>Saguenay</option>
+
+            <option>Saint-Eustache</option>
+
+            <option>Saint-Hubert</option>
+
+            <option>Sainte-Anne-de-Beaupré</option>
+
+            <option>Sainte-Foy</option>
+
+            <option>Sainte-Thérèse</option>
+
+            <option>Sept-Îles</option>
+
+            <option>Sherbrooke</option>
+
+            <option>Sorel-Tracy</option>
+
+            <option>Trois-Rivières</option>
+
+            <option>Val-d’Or</option>
+
+            <option>Waskaganish</option>
+
+            <option>Batoche</option>
+
+            <option>Cumberland House</option>
+
+            <option>Estevan</option>
+
+            <option>Moose Jaw</option>
+
+            <option>Prince Albert</option>
+
+            <option>Regina</option>
+
+            <option>Saskatoon</option>
+
+            <option>Uranium City</option>
+
+            <option>Dawson</option>
+
+            <option>Watson Lake</option>
+
+            <option>Whitehorse</option>
+
+        </datalist>
+
+    
           
     
     </p>
