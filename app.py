@@ -47,8 +47,9 @@ def weather():
         print("Number of people in space:", xx)
 
     x1 = w_json['weather'][0]['description']
+    x2 = w_json['main']['temp']
 
-    return render_template('hello.html', x1=x1, city=city)
+    return render_template('hello.html', x1=x1, city=city, x2= x2-273.15)
     # if request.method == 'POST':
     #     print('weahterrrrrrrrrrrrr')
     #     city = request.form['city']
