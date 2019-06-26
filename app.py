@@ -48,7 +48,7 @@ def weather():
 
     x1 = w_json['weather'][0]['description']
 
-    return render_template('hello.html', x1=x1)
+    return render_template('hello.html', x1=x1, city=city)
     # if request.method == 'POST':
     #     print('weahterrrrrrrrrrrrr')
     #     city = request.form['city']
